@@ -1,5 +1,7 @@
 package controllers;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import play.libs.F;
 import play.libs.WS;
 import play.mvc.*;
@@ -22,8 +24,9 @@ public class Application extends Controller {
 
         await(remoteCall, new F.Action<WS.HttpResponse>() {
             public void invoke(WS.HttpResponse result) {
+                String json = new GsonBuilder().disableHtmlEscaping().create().toJson(result.getString());
                 response.contentType = "application/javascript";
-                renderJSON(new Result(result.getString()));
+                render(json);
             }
         });
     }
