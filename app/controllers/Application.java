@@ -24,9 +24,9 @@ public class Application extends Controller {
 
         await(remoteCall, new F.Action<WS.HttpResponse>() {
             public void invoke(WS.HttpResponse result) {
-                String json = new GsonBuilder().disableHtmlEscaping().create().toJson(result.getString());
+                String json = new GsonBuilder().disableHtmlEscaping().create().toJson(new Result(result.getString()));
                 response.contentType = "application/javascript";
-                render(json);
+                renderJSON(json);
             }
         });
     }
