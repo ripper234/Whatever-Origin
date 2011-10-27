@@ -59,7 +59,7 @@ public class Application extends Controller {
     private static String getResponseStr(WS.HttpResponse result, String url) {
         // Handle raw json to prevent it from being escaped and encoded as a string
         if (result.getContentType().equals("application/json")) {
-            return result.getString();
+            return "{\"contents\":" + result.getString() + "}";
         }
 
         String responseStr =    result.getString().replace("/", "\\/");
