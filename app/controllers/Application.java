@@ -62,7 +62,7 @@ public class Application extends Controller {
             return "{\"contents\":" + result.getString() + "}";
         }
 
-        String responseStr =    result.getString().replace("/", "\\/");
+        String responseStr =    result.getString();
 
         responseStr = new GsonBuilder().disableHtmlEscaping().create().toJson(new Result(responseStr , new Result.Status(url, result.getContentType(), result.getStatus())));
         return responseStr;
