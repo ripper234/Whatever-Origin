@@ -41,9 +41,7 @@ public class Application extends Controller {
 
         await(remoteCall, new F.Action<WS.HttpResponse>() {
             public void invoke(WS.HttpResponse result) {
-                String replace = result.getString().replace("/", "\\/");
-
-                String responseStr = new GsonBuilder().disableHtmlEscaping().create().toJson(new Result(replace, new Result.Status(url, result.getContentType(), result.getStatus())));
+                String responseStr = getResponseStr(result, url);
 
                 // http://blog.altosresearch.com/supporting-the-jsonp-callback-protocol-with-jquery-and-java/
                 if ( callback != null ) {
@@ -56,6 +54,18 @@ public class Application extends Controller {
                 renderJSON(responseStr);
             }
         });
+    }
+
+    private static String getResponseStr(WS.HttpResponse result, String url) {
+        // Handle raw json to prevent it from being escaped and encoded as a string
+        if (result.getContentType().equals("application/json")) {
+            return result.getString();
+        }
+
+        String responseStr =    result.getString().replace("/", "\\/");
+
+        responseStr = new GsonBuilder().disableHtmlEscaping().create().toJson(new Result(responseStr , new Result.Status(url, result.getContentType(), result.getStatus())));
+        return responseStr;
     }
 
     public static String sanitizeJsonpParam(String s) {
