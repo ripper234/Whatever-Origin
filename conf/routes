@@ -5,6 +5,9 @@
 # Home page
 GET     /                                       Application.index
 
+# Google Webmasters
+GET 	/google33a3f855d7e86f3e.html			staticDir:public/html/google33a3f855d7e86f3e.html
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
