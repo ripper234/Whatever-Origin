@@ -40,9 +40,9 @@
 
         <div class="code">
             <pre>
-            $.getJSON('http://whateverorigin.org/get?url=google.com&callback=?', function(data){
-	            alert(data.contents);
-            });
+            $.getJSON('http://whateverorigin.org/get?url=' + encodeURI('http://google.com') + '&callback=?', function(data){
+				alert(data.contents);
+			});
         </pre></div>
 
         </div>
