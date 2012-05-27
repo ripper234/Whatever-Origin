@@ -2,6 +2,7 @@ package controllers;
 
 import com.google.gson.GsonBuilder;
 import org.apache.commons.lang.StringUtils;
+import org.yaml.snakeyaml.util.UriEncoder;
 import play.libs.F;
 import play.libs.WS;
 import play.mvc.*;
@@ -36,12 +37,13 @@ public class Application extends Controller {
         render();
     }
 
-    public static void get(final String url, final String callback) {
-            F.Promise<WS.HttpResponse> remoteCall = WS.url(url).getAsync();
+    public static void get(String url, final String callback) {
+        final String encodedUrl = UriEncoder.encode(url);
+        F.Promise<WS.HttpResponse> remoteCall = WS.url(encodedUrl).getAsync();
 
         await(remoteCall, new F.Action<WS.HttpResponse>() {
             public void invoke(WS.HttpResponse result) {
-                String responseStr = getResponseStr(result, url);
+                String responseStr = getResponseStr(result, encodedUrl);
 
                 // http://blog.altosresearch.com/supporting-the-jsonp-callback-protocol-with-jquery-and-java/
                 if ( callback != null ) {
