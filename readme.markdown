@@ -5,3 +5,5 @@ When I was facing Same Origin problems while developing [Bitcoin Pie](http://bit
 For example, right now try and feed https://bitcointalk.org/ into anyorigin and you'll get an ugly "null" as the output.
 
 Having recently discovered Heroku and Play!, I found that deploying a simple server app is no longer a big deal, and so made out to develop a simple, open source alternative to Any Origin.
+
+[Live site](http://whateverorigin.org/).
