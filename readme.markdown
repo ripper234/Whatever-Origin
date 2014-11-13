@@ -1,3 +1,8 @@
+**[I am looking for an equal partner to help me maintain Whatever-Origin](https://github.com/ripper234/Whatever-Origin/issues/12)**
+
+
+
+
 Whatever Origin is an open source alternative to AnyOrigin.com
 
 When I was facing Same Origin problems while developing [Bitcoin Pie](http://bitcoinpie.com/), I was excited to discover how anyorigin.com solved the issue for me ... only, a week later it stopped working for some https sites.
