@@ -1,4 +1,4 @@
-**[I am looking for an equal partner to help me maintain Whatever-Origin](https://github.com/ripper234/Whatever-Origin/issues/12)**
+**[This project is not maintained](https://github.com/ripper234/Whatever-Origin/issues/12)**. Please also checkout [alloworigin](https://github.com/limtaesu/alloworigin), written in Django.
 
 
 
