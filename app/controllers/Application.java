@@ -2,7 +2,6 @@ package controllers;
 
 import com.google.gson.GsonBuilder;
 import org.apache.commons.lang.StringUtils;
-import org.yaml.snakeyaml.util.UriEncoder;
 import play.libs.F;
 import play.libs.WS;
 import play.mvc.*;
@@ -38,8 +37,7 @@ public class Application extends Controller {
     }
 
     public static void get(String url, final String callback) {
-        final String encodedUrl = UriEncoder.encode(url);
-        F.Promise<WS.HttpResponse> remoteCall = WS.url(encodedUrl).getAsync();
+        F.Promise<WS.HttpResponse> remoteCall = WS.url(url).getAsync();
 
         await(remoteCall, new F.Action<WS.HttpResponse>() {
             public void invoke(WS.HttpResponse result) {
