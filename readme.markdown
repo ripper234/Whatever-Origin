@@ -1,4 +1,4 @@
-**[This project is not maintained](https://github.com/ripper234/Whatever-Origin/issues/12)**. Please also checkout [alloworigin](https://github.com/limtaesu/alloworigin), written in Django.
+**[This project is not maintained](https://github.com/ripper234/Whatever-Origin/issues/12)**. Please also checkout [alloworigin](https://github.com/Eiledon/alloworigin), written in Django.
 
 
 
