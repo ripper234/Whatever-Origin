@@ -38,7 +38,7 @@ public class Application extends Controller {
     }
 
     public static void get(String url, final String callback) {
-        final String encodedUrl = UriEncoder.encode(url);
+        final String encodedUrl = UriEncoder.encode(url).replace("%3F", "?");
         F.Promise<WS.HttpResponse> remoteCall = WS.url(encodedUrl).getAsync();
 
         await(remoteCall, new F.Action<WS.HttpResponse>() {
