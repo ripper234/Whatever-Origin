@@ -15,6 +15,7 @@ GET     /favicon.ico                            404
 GET     /public/                                staticDir:public
 
 GET     /{action}                               Application.{action}
+OPTIONS /{action}                               Application.{action}
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
