@@ -37,6 +37,15 @@ public class Application extends Controller {
         render();
     }
 
+    public static void options(String url, final String callback) {
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
+
+        return ok();
+    }
+
     public static void get(String url, final String callback) {
         final String encodedUrl = UriEncoder.encode(url).replace("%3F", "?");
         F.Promise<WS.HttpResponse> remoteCall = WS.url(encodedUrl).getAsync();
