@@ -1,7 +1,6 @@
-**!!! The live website for this project will SHUT DOWN on June 1st 2021 due to lack of maintainers !!!**
-**You are welcome to fork it or join this project as a maintainer.**
+## Currently rewriting in Go, Java-edition will be archived.
 
-**[This project is not maintained](https://github.com/ripper234/Whatever-Origin/issues/12)**. Please also checkout [alloworigin](https://github.com/Eiledon/alloworigin), written in Django.
+*The live site is under [new management](https://github.com/linden) and will see no functionality change.*
 
 -----
 
