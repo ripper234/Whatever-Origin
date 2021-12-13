@@ -1,6 +1,19 @@
-## Currently rewriting in Go, Java-edition will be archived.
+## Transitioning [The Live Site](http://www.whateverorigin.org/).
 
-*The live site is under [new management](https://github.com/linden) and will see no functionality change.*
+*TLDR: Code will be rewritten in Go and the live site will be under new management while seeing **no functionality change.***
+
+Currently the Java backend has become sluggish and outdated by modern standards and we've decided to rewrite it in Go, the Java code will remain accessible on the `java` branch.
+
+This transition will not effect your usage. We will start by allocating small amounts of the traffic to the new server (to lower the risk of outages).
+
+| Date | Allocation |
+| -- | -- |
+| January 10th | 1% |
+| January 17th | 10% |
+| January 24th | 25% |
+| January 31st | 50% |
+| Febuary 7th |  75% |
+| Febuary 14th | 100% |
 
 -----
 
