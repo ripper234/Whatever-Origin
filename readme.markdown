@@ -6,14 +6,14 @@ Currently the Java backend has become sluggish and outdated by modern standards 
 
 This transition will not effect your usage. We will start by allocating small amounts of the traffic to the new server (to lower the risk of outages).
 
-| Date | Allocation |
-| -- | -- |
-| January 10th | 1% |
-| January 17th | 10% |
-| January 24th | 25% |
-| January 31st | 50% |
-| Febuary 7th |  75% |
-| Febuary 14th | 100% |
+| Date | Allocation | State |
+| -- | -- | -- |
+| January 10th | 1% | ✅ |
+| January 17th | 10% | ✅ |
+| January 24th | 25% | ⏺ |
+| January 31st | 50% | ⏺ |
+| Febuary 7th |  75% | ⏺ |
+| Febuary 14th | 100% | ⏺ |
 
 -----
 
