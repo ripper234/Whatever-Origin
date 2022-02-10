@@ -10,9 +10,9 @@ This transition will not effect your usage. We will start by allocating small am
 | -- | -- | -- |
 | January 10th | 1% | ✅ |
 | January 17th | 10% | ✅ |
-| January 24th | 25% | ⏺ |
-| January 31st | 50% | ⏺ |
-| Febuary 7th |  75% | ⏺ |
+| January 24th | 25% | ✅ |
+| January 31st | 50% | ✅ |
+| Febuary 7th |  75% | ✅ |
 | Febuary 14th | 100% | ⏺ |
 
 -----
