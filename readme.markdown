@@ -1,3 +1,23 @@
+# This project is NO LONGER MAINTAINED
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+
+
 ## Transitioning [The Live Site](http://www.whateverorigin.org/).
 
 *TLDR: Code will be rewritten in Go and the live site will be under new management while seeing **no functionality change.***
